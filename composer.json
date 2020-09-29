@@ -1,0 +1,30 @@
+{
+    "name": "leruge/tp-jwt",
+    "description": "jwt thinkphp auth",
+    "type": "think-extend",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leruge",
+            "email": "leruge@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "topthink/framework": "^5.1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "leruge\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "think-config": {
+            "jwt": "src/config/config.php"
+        }
+    }
+}
