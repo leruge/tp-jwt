@@ -1,8 +1,8 @@
-# tp-jwt
-thinkphp5.1的jwt身份验证包。目前仅支持header传参验证。
+# tp6-jwt
+thinkphp6的jwt身份验证包。目前仅支持header传参验证。
 
 ## 安装
-`composer require leruge/tp-jwt`
+`composer require leruge/tp6-jwt`
 
 ## 说明
 * 目前仅支持HS256算法加密。
@@ -35,11 +35,7 @@ $user = \leruge\facade\JWT::auth();
 $uid = $user->id; // $user['id'];
 ```
 1. 可以使用中间件JWT，如果成功就进行下一步，失败则返回 `['code' =>0, 'msg' => '失败信息']`
-```php
-\think\facade\Route::group(['middleware' => [\leruge\middleware\JWT::class]], function () {
-    // 配置路由
-});
-```
+`\leruge\middleware\JWT::class`
 
 ## 传参方式
-* 将token加入header，如下Authorization:bearer token值
+* 将token加入header，如下`Authorization:bearer token`值

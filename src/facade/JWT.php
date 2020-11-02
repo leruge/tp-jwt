@@ -2,7 +2,6 @@
 
 namespace leruge\facade;
 
-use leruge\User;
 use think\Facade;
 
 /**
@@ -10,7 +9,7 @@ use think\Facade;
  *
  * @method string builder(array $user) static 创建token
  * @method bool validate() static 是否认证通过
- * @method User auth() static 获取信息
+ * @method object auth() static 获取信息
  */
 class JWT extends Facade
 {
